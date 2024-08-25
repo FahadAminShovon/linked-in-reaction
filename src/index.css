@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .parent-div:hover > div:nth-of-type(1) {
+    @apply block;
+  }
+
+  .parent-div:hover > div:nth-of-type(2) > * {
+    @apply origin-top-left animate-scale-in;
+    animation-delay: calc(0.09s * var(--loop-index));
+  }
+}
